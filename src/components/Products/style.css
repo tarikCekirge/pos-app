@@ -1,0 +1,11 @@
+.products-wrapper {
+    @apply flex flex-col gap-4 items-center justify-center w-full p-4
+}
+
+.products-wrapper .title {
+    @apply text-4xl font-bold
+}
+
+.products {
+    @apply w-full grid gap-4 grid-cols-auto-fill-200
+}

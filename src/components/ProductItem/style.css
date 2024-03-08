@@ -1,0 +1,15 @@
+.product-item {
+    @apply rounded-md overflow-hidden border border-gray-200
+}
+
+.product-image img {
+    @apply aspect-4/3 object-cover w-full
+}
+
+.product-info {
+    @apply p-2 grid gap-1
+}
+
+.product-info h5 {
+    @apply text-xl font-bold
+}
