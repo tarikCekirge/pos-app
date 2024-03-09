@@ -1,15 +1,20 @@
 import "./style.css";
-import React from "react";
+import React, { useState } from "react";
 import ProductItem from "../Products/ProductItem";
+import NewProduct from "../Products/NewProduct";
 import { productData } from "../../productData";
 
-const index = () => {
+const Index = () => {
+  const [products, setProducts] = useState(productData);
   return (
     <React.Fragment>
+      <div>
+        <NewProduct setProducts={setProducts} products={products} />
+      </div>
       <div className="products-wrapper">
         <h1 className="title">Products</h1>
         <div className="products">
-          {productData.map((product) => (
+          {products.map((product) => (
             <ProductItem key={product.productName} product={product} />
           ))}
         </div>
@@ -18,4 +23,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

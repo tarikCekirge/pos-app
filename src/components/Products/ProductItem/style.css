@@ -13,3 +13,7 @@
 .product-info h5 {
     @apply text-xl font-bold
 }
+
+.add-to-card {
+    @apply bg-blue-700 text-white p-2 rounded-md text-sm font-bold
+}
