@@ -11,11 +11,11 @@ const Index = (props) => {
   const changeHandler = (e) => {
     const { id, value } = e.target;
     setnewProductData((prevState) => ({ ...prevState, [id]: value }));
-    console.log(newProductData);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newId = props.products.length + 1;
     const { productName, productPrice, imageUrl } = newProductData;
 
     if (!productName || !productPrice || !imageUrl) {
@@ -24,7 +24,7 @@ const Index = (props) => {
     }
 
     // props.setProducts((prev) => [newProductData, ...prev]);
-    props.onSaveProduct(newProductData);
+    props.onSaveProduct({ ...newProductData, id: newId });
 
     console.log("Form submitted:", newProductData);
     setnewProductData({

@@ -9,7 +9,7 @@ const Index = ({ products, setProducts }) => {
   return (
     <>
       <div className="new-product">
-        <ProductForm onSaveProduct={onSaveProduct} />
+        <ProductForm products={products} onSaveProduct={onSaveProduct} />
       </div>
     </>
   );

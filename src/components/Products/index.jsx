@@ -6,6 +6,7 @@ import { productData } from "../../productData";
 
 const Index = () => {
   const [products, setProducts] = useState(productData);
+  console.log(products.length);
   return (
     <React.Fragment>
       <div>
@@ -15,7 +16,7 @@ const Index = () => {
         <h1 className="title">Products</h1>
         <div className="products">
           {products.map((product) => (
-            <ProductItem key={product.productName} product={product} />
+            <ProductItem key={product.id} product={product} />
           ))}
         </div>
       </div>
