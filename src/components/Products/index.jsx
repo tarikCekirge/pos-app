@@ -1,6 +1,6 @@
 import "./style.css";
 import React from "react";
-import ProductItem from "../ProductItem";
+import ProductItem from "../Products/ProductItem";
 import { productData } from "../../productData";
 
 const index = () => {
@@ -9,9 +9,9 @@ const index = () => {
       <div className="products-wrapper">
         <h1 className="title">Products</h1>
         <div className="products">
-          {productData.map((product) => {
-            return <ProductItem key={product.productName} product={product} />;
-          })}
+          {productData.map((product) => (
+            <ProductItem key={product.productName} product={product} />
+          ))}
         </div>
       </div>
     </React.Fragment>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import ProductInfo from "./ProductInfo";
 
 const ProductItem = ({ product }) => {
   const { imageUrl, productName, productPrice } = product;
@@ -9,10 +10,10 @@ const ProductItem = ({ product }) => {
         <div className="product-image">
           <img src={imageUrl} alt="" />
         </div>
-        <div className="product-info">
+        <ProductInfo>
           <h5>{productName}</h5>
           <span>{productPrice}</span>
-        </div>
+        </ProductInfo>
       </div>
     </React.Fragment>
   );
