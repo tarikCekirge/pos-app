@@ -23,10 +23,7 @@ const Index = (props) => {
       return;
     }
 
-    // props.setProducts((prev) => [newProductData, ...prev]);
     props.onSaveProduct({ ...newProductData, id: newId });
-
-    console.log("Form submitted:", newProductData);
     setnewProductData({
       productName: "",
       productPrice: "",
@@ -52,6 +49,11 @@ const Index = (props) => {
           </div>
           <div className="form-input">
             <button type="submit">Ürün Ekle</button>
+          </div>
+          <div className="form-input">
+            <button type="button" onClick={() => props.setIsOpen(false)}>
+              Vazgeç
+            </button>
           </div>
         </form>
       </div>

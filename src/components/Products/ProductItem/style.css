@@ -17,3 +17,7 @@
 .add-to-card {
     @apply bg-blue-700 text-white p-2 rounded-md text-sm font-bold
 }
+
+.delete-product {
+    @apply text-red-600 p-2 rounded-md text-sm font-bold bg-transparent
+}
